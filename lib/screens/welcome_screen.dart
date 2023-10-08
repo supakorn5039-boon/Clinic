@@ -1,11 +1,13 @@
 import 'package:clinic/screens/Signup_screen.dart';
 import 'package:clinic/screens/login_screen.dart';
+import 'package:clinic/widgets/navbar_roots.dart';
 import 'package:flutter/material.dart';
 
 class WelcomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Material(
+      color: Color(0xFFCAF0F0),
       child: Container(
           width: MediaQuery.of(context).size.width,
           height: MediaQuery.of(context).size.height,
@@ -17,12 +19,11 @@ class WelcomeScreen extends StatelessWidget {
                 alignment: Alignment.centerRight,
                 child: TextButton(
                   onPressed: () {
-                    // Navigator.push(context, MaterialPageRoute(
-                    //   builder: (context) =>
-                    // ));
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => NavBarRoots()));
                   },
                   child: Text("SKIP",
-                      style: TextStyle(color: Color(0xFF7165D6), fontSize: 20)),
+                      style: TextStyle(color: Color(0xFF4A72E9), fontSize: 20)),
                 ),
               ),
               SizedBox(height: 50),
@@ -34,8 +35,8 @@ class WelcomeScreen extends StatelessWidget {
               ),
               Text("Doctor Appointment",
                   style: TextStyle(
-                    color: Color(0xFF7165D6),
-                    fontSize: 35,
+                    color: Color(0xFF4A72E9),
+                    fontSize: 30,
                     fontWeight: FontWeight.bold,
                     letterSpacing: 1,
                     wordSpacing: 2,
@@ -54,7 +55,7 @@ class WelcomeScreen extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   Material(
-                    color: Color(0xFF7165D6),
+                    color: Color(0xFF4A72E9),
                     borderRadius: BorderRadius.circular(10),
                     child: InkWell(
                       onTap: () {
@@ -76,7 +77,7 @@ class WelcomeScreen extends StatelessWidget {
                     ),
                   ),
                   Material(
-                    color: Color(0xFF7165D6),
+                    color: Color(0xFF4A72E9),
                     borderRadius: BorderRadius.circular(10),
                     child: InkWell(
                       onTap: () {

@@ -49,7 +49,7 @@ class _NavBarRootsState extends State<NavBarRoots> {
               label: "Home",
             ),
             BottomNavigationBarItem(
-              icon: Icon(CupertinoIcons.bubble_left),
+              icon: Icon(CupertinoIcons.captions_bubble),
               label: "Message",
             ),
             BottomNavigationBarItem(

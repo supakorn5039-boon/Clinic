@@ -1,3 +1,4 @@
+import 'package:clinic/screens/appointment_screen.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -185,7 +186,7 @@ class HomeScreen extends StatelessWidget {
             child: Text(
               "Popular Doctors",
               style: TextStyle(
-                  fontSize: 22,
+                  fontSize: 25,
                   fontWeight: FontWeight.w500,
                   color: Colors.black54),
             ),
@@ -198,7 +199,14 @@ class HomeScreen extends StatelessWidget {
             physics: NeverScrollableScrollPhysics(),
             itemBuilder: (context, index) {
               return InkWell(
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => AppointmentScreen(),
+                    ),
+                  );
+                },
                 child: Container(
                   margin: EdgeInsets.all(10),
                   padding: EdgeInsets.symmetric(vertical: 15),
@@ -223,7 +231,7 @@ class HomeScreen extends StatelessWidget {
                       Text(
                         "Dr. Doctor Name",
                         style: TextStyle(
-                          fontSize: 18,
+                          fontSize: 15,
                           fontWeight: FontWeight.w500,
                           color: Colors.black54,
                         ),
@@ -238,51 +246,6 @@ class HomeScreen extends StatelessWidget {
                         mainAxisSize: MainAxisSize.min,
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          InkWell(
-                            onTap: () {},
-                            child: Container(
-                              padding: EdgeInsets.all(20),
-                              decoration: BoxDecoration(
-                                color: Color(0xFF6F93F3),
-                                borderRadius: BorderRadius.circular(10),
-                                boxShadow: [
-                                  BoxShadow(
-                                    color: Colors.black12,
-                                    blurRadius: 6,
-                                    spreadRadius: 4,
-                                  )
-                                ],
-                              ),
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Container(
-                                    padding: EdgeInsets.all(8),
-                                    decoration: BoxDecoration(
-                                      color: Colors.white,
-                                      shape: BoxShape.circle,
-                                    ),
-                                    child: Icon(
-                                      Icons.add,
-                                      color: Color(0xFF6F93F3),
-                                      size: 35,
-                                    ),
-                                  ),
-                                  SizedBox(height: 30),
-                                  Text(
-                                    "Clinic Visit",
-                                    style: TextStyle(
-                                        fontSize: 18,
-                                        color: Colors.white,
-                                        fontWeight: FontWeight.w500),
-                                  ),
-                                  SizedBox(height: 5),
-                                  Text("Make an appointment",
-                                      style: TextStyle(color: Colors.white54))
-                                ],
-                              ),
-                            ),
-                          ),
                           Icon(
                             Icons.star,
                             color: Colors.amber,

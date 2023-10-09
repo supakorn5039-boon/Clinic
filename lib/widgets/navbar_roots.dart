@@ -1,4 +1,5 @@
 import 'package:clinic/screens/home_screen.dart';
+import 'package:clinic/screens/messages_screen.dart';
 import 'package:clinic/screens/schedule_screen.dart';
 import 'package:clinic/screens/settings_screen.dart';
 import 'package:flutter/cupertino.dart';
@@ -15,7 +16,7 @@ class _NavBarRootsState extends State<NavBarRoots> {
     // Home Screen
     HomeScreen(),
     // Messages Screen
-    Container(),
+    MessagesScreen(),
     // Schedule Screen
     ScheduleScreen(),
     // Settings Screen
@@ -51,7 +52,7 @@ class _NavBarRootsState extends State<NavBarRoots> {
             ),
             BottomNavigationBarItem(
               icon: Icon(CupertinoIcons.captions_bubble),
-              label: "Message",
+              label: "Messages",
             ),
             BottomNavigationBarItem(
               icon: Icon(Icons.calendar_month),

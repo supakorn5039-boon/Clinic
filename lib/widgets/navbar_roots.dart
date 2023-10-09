@@ -1,4 +1,5 @@
 import 'package:clinic/screens/home_screen.dart';
+import 'package:clinic/screens/schedule_screen.dart';
 import 'package:clinic/screens/settings_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -16,7 +17,7 @@ class _NavBarRootsState extends State<NavBarRoots> {
     // Messages Screen
     Container(),
     // Schedule Screen
-    Container(),
+    ScheduleScreen(),
     // Settings Screen
     SettingsScreen(),
   ];
